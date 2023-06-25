@@ -1,0 +1,32 @@
+database details 
+name : disease
+table name : disease_info
+attributes:
+	disease id(primary key)
+	disease name
+	cure
+1. Common cold - runny nose,sore throat,temp
+2. Viral fever-body pain,high temp
+3. Diarrhea-dehydration,watery stool
+4. Headache-headache,dizziness
+5. Ear Infection - ear pain,hearing loss
+6. Indigestion - nausea,heartburn
+
+table name : disease_symptom
+	serial_num
+	disease_id(foriegn key)
+	symptom	
+	
+table name : user details(Not needed for now)
+attributes:
+	name
+	age
+	gender
+	contact no
+	previous medical history
+	list of symptoms
+	
+http://localhost/Internet_Programming%20_Project/main_page.html running link
+
+
+

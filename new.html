@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Solution for the disease
+	</title>
+	<script type="text/javascript">
+		function validateform(){ 
+			var first=document.myform.first_name.value;  
+			var last = document.myform.last_name.value;
+			var age = document.myform.age.value;
+			var gender = document.myform.gender.value;
+			var email = document.myform.email.value;
+			var phone = document.myform.phone.value;
+			var history = document.myform.history.value;
+
+			if (first==""||last=="" ){  
+			  alert("Please enter your name");  
+			  return false;
+			}
+			else if(age==""){
+				alert("Please enter your age");
+			}
+			else if(gender==""){
+				alert("Please select the gender");
+			}
+			else if(email==null||email==""){
+				alert("Please enter an email id");
+			}
+			else if(phone==null||phone==""){
+				alert("Please enter a phone number");
+			}
+			else if (history=null||history==""){
+				alert("Please enter your previous medical history");
+			}
+			
+
+			}
+	</script>  
+	<style>
+		body {
+		  background-image: url('medical_image.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;  
+		  background-size: cover;
+		}
+	</style>
+		
+	</head>
+
+<body>
+
+	<div align="center">
+		<h1>  <strong>Patient Details Entry Form</strong>  </h1>
+	</div>
+	<!--action="main_page.php"-->
+	<form name="myform"  method="post" action="main_page.php" onsubmit="validateform()">
+		<table border="5" align="center">
+			<tr>
+				<td>
+				<label>First Name : </label></td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			
+			<tr>
+			<td>
+				<label>Last Name :</label></td>
+				<td><input type="text" name="last_name"></td>
+			</tr>
+			
+			<tr>
+			<td>
+				<label>Age :</label></td>
+				<td><input type="number" name="age"</td>
+			</tr>
+			
+			<tr>
+				<td>
+				<label>Gender : </label></td>
+				<td><input type="radio" name="gender" value="male">Male
+				<input type="radio" name="gender" value="female">Female</td>
+			</tr>
+			
+			<tr>
+				<td>
+				<label>Email : </label></td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			
+			<tr>
+				<td>
+				<label>Phone : </label></td>
+				<td><input type="phone" name="phone"></td>
+			</tr>
+			
+			<tr>
+				<td>
+				<label>Previous medical history : </label></td>
+				<td><textarea name="history" rows=4 cols=21></textarea></td>
+			</tr>
+			
+			<tr>
+			<td>
+			<label>Select your symptoms :</label></td>
+			<td>
+				<select id="symptom" name="symptom[]" multiple>
+					<option value="body pain">Body Pain</option>
+					<option value="dehydration">Dehydration</option>
+					<option value="dizziness">Dizziness</option>
+					<option value="headache">Headache</option>
+					<option value="high temperature">High Temperature</option>	
+					<option value="runny nose">Runny Nose</option>
+					<option value="sore throat">Sore Throat</option>				
+					<option value="watery stool">Watery Stool</option>
+				</select>
+			</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5" align="center" ><input type="submit" name="save" value="Submit" style="font-size:25px"></td>
+			</tr>
+		</table>
+	</form>
+	
+	<p align='center'>Hold down the Ctrl (Windows) / Command (Mac) button to select multiple options.</p>
+</body>
+</html>
